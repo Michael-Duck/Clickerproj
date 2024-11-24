@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Awesome Clicker RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Super Clicker RPG</h1>
+        <div id="stats">
+            <p>Gold: <span id="gold">0</span></p>
+            <p>Level: <span id="level">1</span></p>
+            <p>XP: <span id="xp">0</span> / <span id="xpNeeded">100</span></p>
+        </div>
+        <button id="clickBtn">Click to gain gold</button>
+        <div id="enemy">
+            <h2>Current Enemy: <span id="enemyName">Goblin</span></h2>
+            <p>Enemy HP: <span id="enemyHP">100</span></p>
+            <button id="attackBtn">Attack Enemy</button>
+        </div>
+        <div id="upgrades">
+            <h2>Upgrades</h2>
+            <button id="upgradeClick">Upgrade Click (Cost: 10 gold)</button>
+            <button id="upgradeAttack">Upgrade Attack (Cost: 20 gold)</button>
+        </div>
+        <div id="inventory">
+            <h2>Inventory</h2>
+            <p>Health Potions: <span id="healthPotions">0</span></p>
+            <button id="buyPotion">Buy Health Potion (Cost: 50 gold)</button>
+            <button id="usePotion">Use Health Potion</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <footer>Created by Clicker RPG Team - Version 1.1</footer>
+</body>
+</html>
