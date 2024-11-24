@@ -87,3 +87,41 @@ document.getElementById('usePotion').addEventListener('click', () => {
 });
 
 updateDisplay();
+
+// Save game state
+function saveGame() {
+    const gameState = {
+        gold, level, xp, xpNeeded, clickPower, attackPower,
+        enemyHP, healthPotions, playerHP, maxPlayerHP,
+        currentEnemy: enemies.indexOf(currentEnemy)
+    };
+    localStorage.setItem('clickerRPGSave', JSON.stringify(gameState));
+    alert('Game saved!');
+}
+
+// Load game state
+function loadGame() {
+    const savedGame = localStorage.getItem('clickerRPGSave');
+    if (savedGame) {
+        const gameState = JSON.parse(savedGame);
+        gold = gameState.gold;
+        level = gameState.level;
+        xp = gameState.xp;
+        xpNeeded = gameState.xpNeeded;
+        clickPower = gameState.clickPower;
+        attackPower = gameState.attackPower;
+        enemyHP = gameState.enemyHP;
+        healthPotions = gameState.healthPotions;
+        playerHP = gameState.playerHP;
+        maxPlayerHP = gameState.maxPlayerHP;
+        currentEnemy = enemies[gameState.currentEnemy];
+        updateDisplay();
+        alert('Game loaded!');
+    } else {
+        alert('No saved game found!');
+    }
+}
+
+// Add event listeners for save and load buttons
+document.getElementById('saveBtn').addEventListener('click', saveGame);
+document.getElementById('loadBtn').addEventListener('click', loadGame);
