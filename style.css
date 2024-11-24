@@ -64,3 +64,17 @@ footer {
     font-size: 14px;
     color: #bdc3c7;
 }
+
+#saveLoad {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#saveBtn, #loadBtn {
+    background-color: #27ae60;
+}
+
+#saveBtn:hover, #loadBtn:hover {
+    background-color: #2ecc71;
+}
